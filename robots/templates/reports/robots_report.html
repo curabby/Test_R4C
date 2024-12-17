@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчет о производстве роботов</title>
+</head>
+<body>
+    <h1>Выгрузка отчёта по производству роботов</h1>
+    <form method="get" action="{% url 'generate_report' %}">
+        <label for="start_date">Начало периода:</label>
+        <input type="date" id="start_date" name="start_date" required>
+
+        <label for="end_date">Конец периода:</label>
+        <input type="date" id="end_date" name="end_date" required>
+
+        <button type="submit">Выгрузить Excel</button>
+    </form>
+</body>
+</html>
