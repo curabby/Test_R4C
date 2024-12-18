@@ -6,7 +6,7 @@ from .models import Robot, RegisteredModel
 # Регистрация модели RegisteredModel
 @admin.register(RegisteredModel)
 class RegisteredModelAdmin(admin.ModelAdmin):
-    list_display = ('model_name', 'version')
+    list_display = ('id', 'model_name', 'version')
     search_fields = ('model_name', 'version')
 
 

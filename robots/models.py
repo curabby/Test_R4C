@@ -17,6 +17,7 @@ class Robot(models.Model):
     serial = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     registered_model = models.ForeignKey(RegisteredModel, on_delete=models.CASCADE, related_name="robots")
     created = models.DateTimeField(blank=False, null=False)
+    is_distributed = models.BooleanField(default=False)
 
     def __str__(self):
         return f"Robot {self.registered_model} ({self.serial})"
