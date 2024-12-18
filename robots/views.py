@@ -106,7 +106,7 @@ def generate_report(request):
     wb = openpyxl.Workbook()
     for model, versions in grouped_data.items():
         ws = wb.create_sheet(title=model)
-        ws.append(["Модель", "Версия", "Количество за выбранный"])
+        ws.append(["Модель", "Версия", "Количество за период"])
         for version, data in versions.items():
             ws.append([model, version, data['count']])  # Количество за период
 
